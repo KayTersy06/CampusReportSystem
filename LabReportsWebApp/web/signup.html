@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>SIGN UP</h1>
+            <div class="form">
+                <form action="SignUpServlet.do" method="POST">
+                    <table>
+                        <tr>
+                            <td>Student number: </td>
+                            <td>
+                                <input type="text" name="id" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Names: </td>
+                            <td>
+                                <input type="text" name="names" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Last name: </td>
+                            <td>
+                                <input type="text" name="surname" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password: </td>
+                            <td>
+                                <input type="password" name="password" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="SIGNUP">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <p>Already signed up? <a href="login.html">Login</a></p>
+        </div>
+    </body>
+</html>
