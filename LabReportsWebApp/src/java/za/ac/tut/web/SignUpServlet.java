@@ -32,24 +32,19 @@ public class SignUpServlet extends HttpServlet {
         String surname = request.getParameter("surname");
         String passwordStr = request.getParameter("password");
         
-        String hashedPassword = sml.hashPassword(passwordStr, studNoStr);
-        if (hashedPassword.isEmpty()) {
-    Logger.getLogger(StudentManagerSB.class.getName()).log(Level.WARNING, "Hashed password is empty.");
-} else {
-    Logger.getLogger(StudentManagerSB.class.getName()).log(Level.INFO, "Hashed password: " + hashedPassword);
-}
+        //String hashedPassword = sml.hashPassword(passwordStr, studNoStr);
         
-        Student student = createStudent(id, names, surname, hashedPassword);
+        Student student = createStudent(id, names, surname, passwordStr);
         sfl.create(student);
         
         RequestDispatcher disp = request.getRequestDispatcher("login.html");
         disp.forward(request, response);
     }
 
-    private Student createStudent(Long id, String names, String surname, String hashedPassword) {
+    private Student createStudent(Long id, String name, String surname, String hashedPassword) {
         Student s = new Student();
         s.setId(id);
-        s.setNames(names);
+        s.setName(name);
         s.setSurname(surname);
         s.setPassword(hashedPassword);
         

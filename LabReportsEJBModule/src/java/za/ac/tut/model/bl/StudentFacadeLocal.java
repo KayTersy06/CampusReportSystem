@@ -12,17 +12,11 @@ import za.ac.tut.model.entity.Student;
 public interface StudentFacadeLocal {
 
     void create(Student student);
-
     void edit(Student student);
-
     void remove(Student student);
-
     Student find(Object id);
-
+    Student login(Long id, String password);
     List<Student> findAll();
-
     List<Student> findRange(int[] range);
-
     int count();
-    
 }

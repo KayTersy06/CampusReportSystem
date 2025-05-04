@@ -1,13 +1,9 @@
 package za.ac.tut.model.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -22,8 +18,8 @@ public class Student implements Serializable {
     @Id
     @Column(name = "STUDENTNUMBER")
     private Long id;
-    @Column(name = "FULLNAMES", nullable = false, length = 100)
-    private String names;
+    @Column(name = "FIRSTNAME", nullable = false, length = 100)
+    private String name;
     @Column(name = "LASTNAME", nullable = false, length = 100)
     private String surname;
     
@@ -33,19 +29,19 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(Long id, String names, String surname, String password) {
+    public Student(Long id, String name, String surname, String password) {
         this.id = id;
-        this.names = names;
+        this.name = name;
         this.surname = surname;
         this.password = password;
     }
 
-    public String getNames() {
-        return names;
+    public String getName() {
+        return name;
     }
 
-    public void setNames(String names) {
-        this.names = names;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
