@@ -9,9 +9,9 @@ import javax.ejb.Local;
 @Local
 public interface StudentManagerSBLocal {
 
-    Boolean checkStudentNumber(String password);
+    Boolean checkStudentNumber(String password) ;
 
-    Boolean validatePassword(String password, String studNo);
+    Boolean validatePassword(String password, String studNo) throws StudentNumberLengthException;
 
     String hashPassword(String password, String studNo);
     

@@ -12,6 +12,15 @@
         <title>Dashboard Page</title>
     </head>
     <body>
+        <nav>
+            <div id="logo">
+                <a href="user_dashboard.jsp">Dashboard</a>
+            </div>
+            <div>
+                <li><a href="profile.jsp">Profile</a></li>
+                <li><a href="LogoutServlet.do">Logout</a></li>
+            </div>
+        </nav>
         <h1>Dashboard</h1>
         <%
             String name = (String)session.getAttribute("name");

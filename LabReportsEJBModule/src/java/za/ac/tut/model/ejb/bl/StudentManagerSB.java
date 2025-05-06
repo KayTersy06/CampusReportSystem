@@ -16,17 +16,13 @@ public class StudentManagerSB implements StudentManagerSBLocal {
     public Boolean checkStudentNumber(String studNo) {
         boolean isValid = false;
         if(studNo.length()==9) {
-            for(int i = 0; i<studNo.length(); i++) {
-                if(Character.isDigit(i)) {
-                    isValid = true;
-                }
-            }     
+            isValid = true;     
         }
         return isValid;
     }
 
     @Override
-    public Boolean validatePassword(String password, String studNo) {
+    public Boolean validatePassword(String password, String studNo) throws StudentNumberLengthException {
         boolean isValidPswd = false;
         int isDigit = 0, isCharacter = 0, isUpper = 0, isLower = 0;
         if(checkStudentNumber(studNo)) {
@@ -47,7 +43,9 @@ public class StudentManagerSB implements StudentManagerSBLocal {
                     //throw password validation exception if not
                 }
             }
-        }//throw student number length exception
+        }  else {
+            throw new StudentNumberLengthException("The student number should be 9 characters long.");
+        }
         return isValidPswd;
     }
 

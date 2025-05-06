@@ -7,7 +7,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import za.ac.tut.model.bl.StudentFacadeLocal;
 import za.ac.tut.model.entity.Student;
 
@@ -15,27 +14,26 @@ import za.ac.tut.model.entity.Student;
  *
  * @author kayte
  */
-public class LoginServlet extends HttpServlet {
+public class EditUserProfileServlet extends HttpServlet {
     @EJB StudentFacadeLocal sfl;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
         Long id = Long.parseLong(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
         String password = request.getParameter("password");
         
-        Student student = sfl.login(id, password);
-        Long sessID = student.getId();
-        String name = student.getName();
-        String surname = student.getSurname();
+        Student student = editStudent(id, name, surname, password);
+        sfl.edit(student);
         
-        session.setAttribute("sessID", sessID);
-        session.setAttribute("name", name);
-        session.setAttribute("surname", surname);
-        session.setAttribute("password", password);
-        
-        RequestDispatcher disp = request.getRequestDispatcher("user_dashboard.jsp");
+        RequestDispatcher disp = request.getRequestDispatcher("profile.jsp");
         disp.forward(request, response);
+    }
+
+    private Student editStudent(Long id, String name, String surname, String password) {
+        Student student = new Student(id, name, surname, password);
+        return student;
     }
 }
