@@ -25,13 +25,15 @@ public class Maintenance implements Serializable {
     private Long id;
     @Column(name = "FULLNAME", nullable = false, length = 50)
     private String names;
-
+    private String password;
+    
     public Maintenance() {
     }
 
-    public Maintenance(Long id, String names) {
+    public Maintenance(Long id, String names, String password) {
         this.id = id;
         this.names = names;
+        this.password = password;
     }
 
     public String getNames() {
@@ -40,6 +42,14 @@ public class Maintenance implements Serializable {
 
     public void setNames(String names) {
         this.names = names;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Long getId() {

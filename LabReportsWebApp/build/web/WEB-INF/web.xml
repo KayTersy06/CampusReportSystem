@@ -24,6 +24,14 @@
         <servlet-name>EditUserProfileServlet</servlet-name>
         <servlet-class>za.ac.tut.web.EditUserProfileServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StaffSignUpServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.StaffSignUpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.StaffLoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUpServlet.do</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>EditUserProfileServlet</servlet-name>
         <url-pattern>/EditUserProfileServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffSignUpServlet</servlet-name>
+        <url-pattern>/StaffSignUpServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <url-pattern>/StaffLoginServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

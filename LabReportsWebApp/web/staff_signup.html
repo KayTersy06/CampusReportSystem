@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+              <title>Sign Up Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>SIGN UP</h1>
+            <div class="form">
+                <form action="StaffSignUpServlet.do" method="POST">
+                    <table>
+                        <tr>
+                            <td>Maintenance  ID: </td>
+                            <td>
+                                <input type="text" name="id" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Names: </td>
+                            <td>
+                                <input type="text" name="names" required="">
+                            </td>
+                        </tr>
+                       
+                        <tr>
+                            <td>Password: </td>
+                            <td>
+                                <input type="password" name="password" required="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="SIGNUP">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <p>Already signed up? <a href="staff_login.html">Login</a></p>
+        </div>
+   
+    </body>
+</html>

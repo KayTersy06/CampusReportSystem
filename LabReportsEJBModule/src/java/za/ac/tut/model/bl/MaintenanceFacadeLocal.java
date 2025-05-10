@@ -24,5 +24,5 @@ public interface MaintenanceFacadeLocal {
     List<Maintenance> findRange(int[] range);
 
     int count();
-    
+    Maintenance login(Long id, String password);
 }
