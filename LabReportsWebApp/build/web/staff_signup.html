@@ -1,51 +1,118 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-              <title>Sign Up Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            <h1>SIGN UP</h1>
-            <div class="form">
-                <form action="StaffSignUpServlet.do" method="POST">
-                    <table>
-                        <tr>
-                            <td>Maintenance  ID: </td>
-                            <td>
-                                <input type="text" name="id" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Names: </td>
-                            <td>
-                                <input type="text" name="names" required="">
-                            </td>
-                        </tr>
-                       
-                        <tr>
-                            <td>Password: </td>
-                            <td>
-                                <input type="password" name="password" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input type="submit" value="SIGNUP">
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <p>Already signed up? <a href="staff_login.html">Login</a></p>
-        </div>
-   
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the sign-up form */
+        .signup-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading styling */
+        .signup-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        /* Form styling */
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container label {
+            margin-bottom: 5px;
+            color: #555555;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="password"] {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .signup-container input[type="submit"] {
+            background-color: #4facfe;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-container input[type="submit"]:hover {
+            background-color: #00c6ff;
+        }
+
+        .signup-container p {
+            text-align: center;
+            margin-top: 20px;
+            color: #555555;
+        }
+
+        .signup-container p a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+
+        .signup-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .signup-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Staff Sign Up</h1>
+        <form action="StaffSignUpServlet.do" method="POST">
+            <label for="id">Maintenance ID:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="names">Names:</label>
+            <input type="text" id="names" name="names" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="SIGN UP">
+        </form>
+        <p>Already signed up? <a href="staff_login.html">Login</a></p>
+    </div>
+</body>
 </html>
