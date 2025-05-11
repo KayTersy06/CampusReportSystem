@@ -32,6 +32,14 @@
         <servlet-name>StaffLoginServlet</servlet-name>
         <servlet-class>za.ac.tut.web.StaffLoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewStudentReport</servlet-name>
+        <servlet-class>viewStudentReport.viewStudentReport</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewReportByStudent</servlet-name>
+        <servlet-class>za.ac.tut.web.ViewReportByStudent</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUpServlet.do</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>StaffLoginServlet</servlet-name>
         <url-pattern>/StaffLoginServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewStudentReport</servlet-name>
+        <url-pattern>/viewStudentReport.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewReportByStudent</servlet-name>
+        <url-pattern>/ViewReportByStudent.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

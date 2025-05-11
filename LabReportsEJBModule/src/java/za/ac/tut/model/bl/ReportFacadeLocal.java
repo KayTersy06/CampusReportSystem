@@ -18,6 +18,8 @@ public interface ReportFacadeLocal {
     void remove(Report report);
 
     Report find(Object id);
+    
+    List<Report> FindStudentReps(Long studentNumber);
 
     List<Report> findAll();
 

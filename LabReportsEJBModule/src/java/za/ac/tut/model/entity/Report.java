@@ -34,6 +34,7 @@ public class Report implements Serializable {
     private String description;
     private String lab;
     private String status;
+    private Long RepoterStudentNum ;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
@@ -42,12 +43,23 @@ public class Report implements Serializable {
     public Report() {
     }
 
-    public Report(String description, String lab, String status, Date creationDate) {
+    public Report(Long id, String description, String lab, String status, Long RepoterStudentNum, Date creationDate) {
+        this.id = id;
         this.description = description;
         this.lab = lab;
         this.status = status;
+        this.RepoterStudentNum = RepoterStudentNum;
         this.creationDate = creationDate;
     }
+
+    public Long getRepoterStudentNum() {
+        return RepoterStudentNum;
+    }
+
+    public void setRepoterStudentNum(Long RepoterStudentNum) {
+        this.RepoterStudentNum = RepoterStudentNum;
+    }
+
 
     public String getDescription() {
         return description;

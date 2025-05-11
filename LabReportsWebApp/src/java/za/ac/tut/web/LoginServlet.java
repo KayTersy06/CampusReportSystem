@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("name", name);
         session.setAttribute("surname", surname);
         session.setAttribute("password", password);
+        session.setAttribute("student", student);
         
         RequestDispatcher disp = request.getRequestDispatcher("user_dashboard.jsp");
         disp.forward(request, response);
