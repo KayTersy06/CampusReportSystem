@@ -3,29 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package za.ac.tut.model.entity;
+package za.ac.tut.model.bl;
 
 import java.util.List;
 import javax.ejb.Local;
+import za.ac.tut.model.entity.Report;
 
 /**
  *
  * @author kayte
  */
 @Local
-public interface LabFacadeLocal {
+public interface ReportFacadeLocal {
 
-    void create(Lab lab);
+    void create(Report report);
 
-    void edit(Lab lab);
+    void edit(Report report);
 
-    void remove(Lab lab);
+    void remove(Report report);
 
-    Lab find(Object id);
+    Report find(Object id);
 
-    List<Lab> findAll();
+    List<Report> findAll();
 
-    List<Lab> findRange(int[] range);
+    List<Report> findRange(int[] range);
 
     int count();
     

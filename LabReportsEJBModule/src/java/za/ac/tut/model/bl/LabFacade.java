@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package za.ac.tut.model.entity;
+package za.ac.tut.model.bl;
 
+import za.ac.tut.model.bl.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import za.ac.tut.model.entity.Lab;
 
 /**
  *

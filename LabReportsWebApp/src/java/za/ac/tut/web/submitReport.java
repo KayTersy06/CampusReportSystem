@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import za.ac.tut.model.entity.Lab;
-import za.ac.tut.model.entity.LabFacadeLocal;
+import za.ac.tut.model.bl.LabFacadeLocal;
 import za.ac.tut.model.entity.Report;
-import za.ac.tut.model.entity.ReportFacadeLocal;
+import za.ac.tut.model.bl.ReportFacadeLocal;
 
 /**
  *

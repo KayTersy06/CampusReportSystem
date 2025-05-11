@@ -1,8 +1,10 @@
-package za.ac.tut.model.entity;
+package za.ac.tut.model.bl;
 
+import za.ac.tut.model.bl.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import za.ac.tut.model.entity.Report;
 
 /**
  *

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import za.ac.tut.model.entity.Report;
-import za.ac.tut.model.entity.ReportFacadeLocal;
+import za.ac.tut.model.bl.ReportFacadeLocal;
 
 /**
  *
