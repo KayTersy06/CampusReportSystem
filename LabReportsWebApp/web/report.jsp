@@ -65,13 +65,7 @@
     <h1>Report</h1>
     <form action="submitReport.do" method="POST">
         <table>
-            <tr>
-                <td>Report ID</td>
-                <td>
-                    <input type="text" name="repID" required=""/>
-                </td>
-                    
-            </tr>
+           
             <tr>
                 <td>Report description</td>
                 <td>
