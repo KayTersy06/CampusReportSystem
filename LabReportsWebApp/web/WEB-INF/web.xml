@@ -40,6 +40,14 @@
         <servlet-name>ViewReportByStudent</servlet-name>
         <servlet-class>za.ac.tut.web.ViewReportByStudent</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateReportServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.UpdateReportServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAllReportServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.ViewAllReportServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUpServlet.do</url-pattern>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>ViewReportByStudent</servlet-name>
         <url-pattern>/ViewReportByStudent.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateReportServlet</servlet-name>
+        <url-pattern>/UpdateReportServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAllReportServlet</servlet-name>
+        <url-pattern>/ViewAllReportServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

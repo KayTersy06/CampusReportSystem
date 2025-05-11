@@ -3,6 +3,7 @@ package za.ac.tut.model.bl;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import za.ac.tut.model.entity.Report;
@@ -33,6 +34,17 @@ public List<Report> FindStudentReps(Long studentNumber) {
     return query.getResultList();
 }
 
-
+    @Override
+    public Report searchByLab(String lab) {
     
+        try {
+        Query query = em.createQuery("SELECT r FROM Report r WHERE r.lab = :lab");
+        query.setParameter("lab", lab);
+        return (Report) query.getSingleResult();
+    } catch (NoResultException e) {
+        return null;
+    }
+
+
+    }  
 }

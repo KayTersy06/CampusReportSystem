@@ -31,8 +31,8 @@
             Please select one of the following options:
         </p>
         <ul>
-            <li><a href="edit_reports.jsp">Update Report Progress</a></li>
-            <li><a href="view_all_reports.jsp">View All  Reports</a></li>
+            <li><a href="update_report.jsp">Update Report Progress</a></li>
+            <li><a href="view_all_report.jsp">View All  Reports</a></li>
             <li><a href="filter_report_by_lab_location.jsp">Filter Reports By Lab Location</a></li>
             <li><a href="filter_report_by_status.jsp">Filter Report Status</a></li>
             <li><a href="filter_report_by_category.jsp">Filter Report Category</a></li>

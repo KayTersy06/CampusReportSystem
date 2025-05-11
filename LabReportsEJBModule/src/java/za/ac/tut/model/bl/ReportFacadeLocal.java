@@ -26,5 +26,7 @@ public interface ReportFacadeLocal {
     List<Report> findRange(int[] range);
 
     int count();
+
+    public Report searchByLab(String lab);
     
 }
