@@ -36,6 +36,7 @@ public class submitReport extends HttpServlet {
         String lab = request.getParameter("lab");
         
         
+        
         Long studId = (Long) session.getAttribute("sessID");
         Report rep = new Report();
         rep.setId(repID);

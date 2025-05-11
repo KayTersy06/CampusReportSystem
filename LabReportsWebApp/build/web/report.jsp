@@ -75,14 +75,30 @@
             <tr>
                 <td>Report description</td>
                 <td>
-                    <input type="text" name="description" required=""/>
+                    <select name="description">
+                        <option value="lights">Lights</option>
+                        <option value="broken windows">Broken windows</option>
+                        <option value="not working Pc">Not working Pc</option>
+                        <option value="leakage">Leakage</option>
+                        <option></option>
+                    </select>
                 </td>
                     
             </tr>
             <tr>
                 <td>Report lab</td>
                 <td>
-                    <input type="text" name="lab" required=""/>
+                    <select name="lab">
+                        <option value="building 10 lab ">Lab 1 </option>
+                         <option value="building 10 lab 120">Lab 120 </option>
+                          <option value="building 10 lab 125">building 10 lab 125 </option>
+                           <option value="building 10 lab 138">building 10 lab 138 </option>
+                            <option value="building 10 lab 144">building 10 lab 144 </option>
+                             <option value="building 10 lab 141">building 10 lab 141 </option>
+                             <option value="building 10 lab 120">building 10 lab 120 </option>
+                             <option value="building 10 lab 230">building 10 lab 230 </option>
+                               <option value="building 10 lab 154">building 10 lab 154 </option>
+                    </select>
                 </td>
                     
             </tr>
