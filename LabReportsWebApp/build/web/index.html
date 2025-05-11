@@ -1,23 +1,89 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Home Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            <h1>Lab Reports Web Application</h1>
-            <div>
-                <p>Student?</p>
-                <button onclick="window.location.href='signup.html'">Get Started</button>
-                <button onclick="window.location.href='login.html'">Login</button>
-            </div>
-            <div>
-                <p>Staff Member?</p>
-                <button onclick="window.location.href='staff_signup.html'">Get Started</button>
-                <button onclick="window.location.href='stafflogin.html'">Login</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Reports Web Application</title>
+    <style>
+        /* Reset default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555555;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button-group button {
+            flex: 1;
+            padding: 12px;
+            background-color: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group button:hover {
+            background-color: #00c6ff;
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lab Reports Web Application</h1>
+        <div class="section">
+            <div class="button-group">
+                <button onclick="window.location.href='menu.html'">Get Started</button>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
