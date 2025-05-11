@@ -1,50 +1,113 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sign Up Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            <h1>SIGN UP</h1>
-            <div class="form">
-                <form action="SignUpServlet.do" method="POST">
-                    <table>
-                        <tr>
-                            <td>Student number: </td>
-                            <td>
-                                <input type="text" name="id" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Names: </td>
-                            <td>
-                                <input type="text" name="names" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Last name: </td>
-                            <td>
-                                <input type="text" name="surname" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Password: </td>
-                            <td>
-                                <input type="password" name="password" required="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input type="submit" value="SIGNUP">
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <p>Already signed up? <a href="login.html">Login</a></p>
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the sign-up form */
+        .signup-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading styling */
+        .signup-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        /* Form styling */
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Input fields styling */
+        .signup-container input[type="text"],
+        .signup-container input[type="password"] {
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Submit button styling */
+        .signup-container input[type="submit"] {
+            background-color: #4facfe;
+            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-container input[type="submit"]:hover {
+            background-color: #00c6ff;
+        }
+
+        /* Login link styling */
+        .signup-container p {
+            text-align: center;
+            margin-top: 20px;
+            color: #555555;
+        }
+
+        .signup-container p a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            .signup-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form action="SignUpServlet.do" method="POST">
+            <input type="text" name="id" placeholder="Student Number" required>
+            <input type="text" name="names" placeholder="First Name(s)" required>
+            <input type="text" name="surname" placeholder="Last Name" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <p>Already signed up? <a href="login.html">Login</a></p>
+    </div>
+</body>
 </html>
