@@ -2,8 +2,9 @@
 package za.ac.tut.model.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,19 +25,16 @@ public class Lab implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String Name ;
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private Date date;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "report_id")
     private Report rep ;
 
     public Lab() {
     }
 
-    public Lab(Long id, String Name, Date date, Report rep) {
+    public Lab(Long id, String Name, Report rep) {
         this.id = id;
         this.Name = Name;
-        this.date = date;
         this.rep = rep;
     }
 
@@ -46,14 +44,6 @@ public class Lab implements Serializable {
 
     public void setName(String Name) {
         this.Name = Name;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public Report getRep() {
