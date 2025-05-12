@@ -27,20 +27,11 @@ public class ViewAllReportServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            // Get all reports from the database
-            List<Report> reports = reportFacade.findAll();
-            
-            // Set the reports as a request attribute
-            request.setAttribute("reports", reports);
-            
-            // Forward to the view JSP
-            request.getRequestDispatcher("view_all_report_outcome.jsp").forward(request, response);
-        } catch (Exception e) {
-            // Handle any errors
-            request.setAttribute("error", "Error retrieving reports: " + e.getMessage());
-            request.getRequestDispatcher("error.jsp").forward(request, response);
-        }
+        List<Report> reports = reportFacade.findAll();
+        
+        // Set attributes and forward to output page
+        request.setAttribute("reports", reports);
+        request.getRequestDispatcher("viewAllReportsOutput.jsp").forward(request, response);
     }
 
     
