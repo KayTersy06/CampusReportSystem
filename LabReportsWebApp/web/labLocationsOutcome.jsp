@@ -1,5 +1,5 @@
 <%-- 
-    Document   : labLocationsOutcome
+    Document   : 
     Created on : 12 May 2025, 7:33:47 AM
     Author     : ripfu
 --%>
@@ -65,7 +65,11 @@
     <div class="container">
         <h2>Lab Location Entered</h2>
         <p><%= lab != null && !lab.trim().isEmpty() ? lab : "No lab entered." %></p>
-        <a href="searchLabLocation.jsp" class="back-link">← Back to Search</a>
+        
+        <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="LogoutServlet.do">Logout</a></li>
+    </ul>
     </div>
 </body>
 </html>

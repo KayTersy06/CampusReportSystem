@@ -64,7 +64,11 @@
     <div class="container">
         <h2>Selected Status</h2>
         <p><%= selectedStatus != null ? selectedStatus : "No status selected." %></p>
-        <a href="selectStatus.jsp" class="back-link">← Back to Status Form</a>
+        
+        <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="LogoutServlet.do">Logout</a></li>
+    </ul>
     </div>
 </body>
 </html>
