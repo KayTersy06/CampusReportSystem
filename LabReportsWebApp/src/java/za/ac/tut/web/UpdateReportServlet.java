@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import za.ac.tut.model.entity.Report;
 import za.ac.tut.model.bl.ReportFacadeLocal;
+import za.ac.tut.model.entity.Report;
 
 
 /**
@@ -21,49 +21,29 @@ public class UpdateReportServlet extends HttpServlet {
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            Long id = Long.parseLong(request.getParameter("id"));
-            Report report = reportFacade.find(id);
+      Long reportId = Long.parseLong(request.getParameter("reportId"));
+        String newStatus = request.getParameter("status");
+        
+        // Find the report and update its status
+        Report report = reportFacade.find(reportId);
+        String message;
+        
+        if (report != null) {
+            String oldStatus = report.getStatus();
+            report.setStatus(newStatus);
+            reportFacade.edit(report);
             
-            if (report != null) {
-                request.setAttribute("report", report);
-                request.getRequestDispatcher("update_report.jsp").forward(request, response);
-            } else {
-                request.setAttribute("error", "Report not found");
-                request.getRequestDispatcher("error.jsp").forward(request, response);
-            }
-        } catch (Exception e) {
-            request.setAttribute("error", "Error: " + e.getMessage());
-            request.getRequestDispatcher("error.jsp").forward(request, response);
+            message = "Status updated successfully!<br>"
+                    + "Report ID: " + reportId + "<br>"
+                    + "Old Status: " + oldStatus + "<br>"
+                    + "New Status: " + newStatus;
+        } else {
+            message = "Report with ID " + reportId + " not found!";
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            Long id = Long.parseLong(request.getParameter("id"));
-           
-            String description = request.getParameter("description");
-            String status = request.getParameter("status");
-            
-            Report report = reportFacade.find(id);
-            
-            if (report != null) {
-                report.setDescription(description);
-                report.setStatus(status);
-                reportFacade.edit(report);
-                
-                request.setAttribute("updateStatus", "Report updated successfully");
-                request.getRequestDispatcher("update_report_outcome.jsp").forward(request, response);
-            } else {
-                request.setAttribute("error", "Report not found");
-                request.getRequestDispatcher("error.jsp").forward(request, response);
-            }
-        } catch (Exception e) {
-            request.setAttribute("error", "Update failed: " + e.getMessage());
-            request.getRequestDispatcher("error.jsp").forward(request, response);
-        }
+        
+        // Set attributes and forward to output page
+        request.setAttribute("message", message);
+        request.getRequestDispatcher("update_report_outcome.jsp").forward(request, response);
     }
     
 

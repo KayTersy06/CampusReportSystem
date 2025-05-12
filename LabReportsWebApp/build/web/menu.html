@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Reports Web Application</title>
+    <title>Menu Page</title>
     <style>
         /* Reset default styles */
         * {
@@ -49,41 +49,51 @@
 
         .button-group {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .button-group button {
-            flex: 1;
+        .button-group a {
+            display: block;
             padding: 12px;
             background-color: #4facfe;
             color: white;
-            border: none;
+            text-align: center;
             border-radius: 5px;
+            text-decoration: none;
             font-size: 16px;
-            cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        .button-group button:hover {
+        .button-group a:hover {
             background-color: #00c6ff;
-        }
-
-        @media (max-width: 600px) {
-            .button-group {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Lab Reports Web Application</h1>
+        <h1>Menu</h1>
+        
         <div class="section">
+            <p>Student:</p>
             <div class="button-group">
-                <button onclick="window.location.href='menu.html'">Get Started</button>
+                <a href="report.jsp">Report a fault</a>
+                <a href="view_reports.jsp">View All Your Reports</a>
             </div>
         </div>
+        
+        <div class="section">
+            <p>Maintenance:</p>
+            <div class="button-group">
+                <a href="update_report.jsp">Update Report Progress</a>
+                <a href="view_all_report.jsp">View All Reports</a>
+                <a href="filter_report_by_lab_location.jsp">Filter Reports By Lab Location</a>
+                <a href="filter_report_by_status.jsp">Filter Report Status</a>
+                <a href="filter_report_by_category.jsp">Filter Report Category</a>
+                <a href="filter_report_by_studentnum.jsp">Filter Report Student Number</a>
+            </div>
+        </div>
+        <a href="LogoutServlet.do">Logout</a>
     </div>
 </body>
 </html>
