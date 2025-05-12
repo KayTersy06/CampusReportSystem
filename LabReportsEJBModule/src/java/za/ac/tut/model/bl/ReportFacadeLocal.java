@@ -23,9 +23,10 @@ public interface ReportFacadeLocal {
     void remove(Report report);
 
     Report find(Object id);
+    List<Report> findReportsByCategory(String category);
 
     List<Report> findAll();
-
+    
     List<Report> findRange(int[] range);
 
     int count();

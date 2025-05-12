@@ -43,14 +43,13 @@ public class UpdateReportServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             Long id = Long.parseLong(request.getParameter("id"));
-            String lab = request.getParameter("lab");
+           
             String description = request.getParameter("description");
             String status = request.getParameter("status");
             
             Report report = reportFacade.find(id);
             
             if (report != null) {
-                report.setLab(lab);
                 report.setDescription(description);
                 report.setStatus(status);
                 reportFacade.edit(report);
