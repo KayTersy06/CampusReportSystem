@@ -28,7 +28,7 @@ public interface ReportFacadeLocal {
     List<Report> findAll();
     
     List<Report> findRange(int[] range);
-
+    List<Report> findReportsByStudentNum(Long studentNum);
     int count();
     
 }
