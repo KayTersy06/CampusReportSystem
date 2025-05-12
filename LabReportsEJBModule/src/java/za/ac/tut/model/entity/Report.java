@@ -25,7 +25,7 @@ public class Report implements Serializable {
     @Column(name = "REPORT_ID")
     private Long id;
     private String description;
-    private String lab;
+    private String category;
     private String status;
     private Long RepoterStudentNum ;
     
@@ -36,13 +36,20 @@ public class Report implements Serializable {
     public Report() {
     }
 
-    public Report(Long id, String description, String lab, String status, Long RepoterStudentNum, Date creationDate) {
-        this.id = id;
+    public Report(String description, String category, String status, Long RepoterStudentNum, Date creationDate) {
         this.description = description;
-        this.lab = lab;
+        this.category = category;
         this.status = status;
         this.RepoterStudentNum = RepoterStudentNum;
         this.creationDate = creationDate;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public Long getRepoterStudentNum() {
@@ -60,14 +67,6 @@ public class Report implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getLab() {
-        return lab;
-    }
-
-    public void setLab(String lab) {
-        this.lab = lab;
     }
 
     public String getStatus() {

@@ -38,7 +38,7 @@ public class submitReport extends HttpServlet {
         Report rep = new Report();
         rep.setCreationDate(new Date());
         rep.setDescription(description);
-        rep.setLab(lab);
+       
         rep.setRepoterStudentNum(studId);
         rep.setStatus("not Fixed");
         
@@ -47,7 +47,7 @@ public class submitReport extends HttpServlet {
         
         Lab labObject = new Lab();
         labObject.setName(lab);
-        labObject.setDate(new Date());
+        
         labObject.setRep(rep);
         
         lfl.create(labObject);
