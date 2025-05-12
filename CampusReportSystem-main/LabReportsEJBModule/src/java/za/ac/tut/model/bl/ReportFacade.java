@@ -1,22 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package za.ac.tut.model.bl;
 
 import za.ac.tut.model.bl.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import za.ac.tut.model.entity.Lab;
+import za.ac.tut.model.entity.Report;
 
 /**
  *
  * @author kayte
  */
 @Stateless
-public class LabFacade extends AbstractFacade<Lab> implements LabFacadeLocal {
+public class ReportFacade extends AbstractFacade<Report> implements ReportFacadeLocal {
 
     @PersistenceContext(unitName = "LabReportsEJBModulePU")
     private EntityManager em;
@@ -26,8 +21,8 @@ public class LabFacade extends AbstractFacade<Lab> implements LabFacadeLocal {
         return em;
     }
 
-    public LabFacade() {
-        super(Lab.class);
+    public ReportFacade() {
+        super(Report.class);
     }
     
 }
