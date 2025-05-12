@@ -12,6 +12,14 @@
         <servlet-name>ViewAllReportServlet</servlet-name>
         <servlet-class>za.ac.tut.web.ViewAllReportServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProgressStatusServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.ProgressStatusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LabLocationServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.LabLocationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>submitReport</servlet-name>
         <url-pattern>/submitReport.do</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>ViewAllReportServlet</servlet-name>
         <url-pattern>/ViewAllReportServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProgressStatusServlet</servlet-name>
+        <url-pattern>/ProgressStatusServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LabLocationServlet</servlet-name>
+        <url-pattern>/LabLocationServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
