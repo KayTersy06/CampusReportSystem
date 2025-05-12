@@ -23,15 +23,12 @@ public interface ReportFacadeLocal {
     void remove(Report report);
 
     Report find(Object id);
-<<<<<<< HEAD:CampusReportSystem-main/LabReportsEJBModule/src/java/za/ac/tut/model/bl/ReportFacadeLocal.java
-=======
     List<Report> findReportsByCategory(String category);
->>>>>>> 77cf3a8d259b4edb4868c2bd9ebcee976c3a205b:LabReportsEJBModule/src/java/za/ac/tut/model/bl/ReportFacadeLocal.java
 
     List<Report> findAll();
     
     List<Report> findRange(int[] range);
-    List<Report> findReportsByStudentNum(Long studentNum);
+
     int count();
     
 }

@@ -68,9 +68,4 @@ public class ReportFacade extends AbstractFacade<Report> implements ReportFacade
              .setParameter("category", category)
              .getResultList();    }
     
-       public List<Report> findReportsByStudentNum(Long studentNum) {
-        return em.createQuery("SELECT r FROM Report r WHERE r.RepoterStudentNum = :studentNum", Report.class)
-                 .setParameter("studentNum", studentNum)
-                 .getResultList();
-    }
 }
