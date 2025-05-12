@@ -4,6 +4,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import za.ac.tut.model.entity.Report;
 
 /**
@@ -67,5 +68,11 @@ public class ReportFacade extends AbstractFacade<Report> implements ReportFacade
     return em.createQuery("SELECT r FROM Report r WHERE r.category = :category", Report.class)
              .setParameter("category", category)
              .getResultList();    }
+    
+       public List<Report> findReportsByStudentNum(Long studentNum) {
+        TypedQuery<Report> query = em.createQuery("SELECT r FROM Report r WHERE r.RepoterStudentNum = :studentNum", Report.class);
+        query.setParameter("studentNum", studentNum);
+        return query.getResultList();
+    }
     
 }

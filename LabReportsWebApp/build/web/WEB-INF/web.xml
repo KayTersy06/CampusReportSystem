@@ -20,10 +20,18 @@
         <servlet-name>LabLocationServlet</servlet-name>
         <servlet-class>za.ac.tut.web.LabLocationServlet</servlet-class>
     </servlet>
-     <servlet>
-    <servlet-name>ViewReportsByCategoryServlet</servlet-name>
-    <servlet-class>za.ac.tut.web.ViewReportsByCategoryServlet</servlet-class>
-</servlet>
+    <servlet>
+        <servlet-name>ViewReportsByCategoryServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.ViewReportsByCategoryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogsoutServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.LogsoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>submitReport</servlet-name>
         <url-pattern>/submitReport.do</url-pattern>
@@ -44,12 +52,14 @@
         <servlet-name>LabLocationServlet</servlet-name>
         <url-pattern>/LabLocationServlet.do</url-pattern>
     </servlet-mapping>
-  
-<servlet-mapping>
-    <servlet-name>ViewReportsByCategoryServlet</servlet-name>
-    <url-pattern>/ViewReportsByCategoryServlet.do</url-pattern>
-</servlet-mapping>
-
+    <servlet-mapping>
+        <servlet-name>ViewReportsByCategoryServlet</servlet-name>
+        <url-pattern>/ViewReportsByCategoryServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogsoutServlet</servlet-name>
+        <url-pattern>/LogsoutServlet.do</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

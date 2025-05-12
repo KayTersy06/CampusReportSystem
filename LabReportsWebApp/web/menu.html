@@ -68,6 +68,23 @@
         .button-group a:hover {
             background-color: #00c6ff;
         }
+
+        .logout-button {
+            display: block;
+            padding: 12px;
+            background-color: #ff4c4c;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #ff1a1a;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +110,8 @@
                 <a href="filter_report_by_studentnum.jsp">Filter Report Student Number</a>
             </div>
         </div>
-        <a href="LogoutServlet.do">Logout</a>
+        
+        <a href="LogsoutServlet.do" class="logout-button">Logout</a>
     </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author kayte
  */
-public class LogoutServlet extends HttpServlet {
+public class LogsoutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
