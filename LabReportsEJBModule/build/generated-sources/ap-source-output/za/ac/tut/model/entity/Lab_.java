@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import za.ac.tut.model.entity.Report;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2025-05-12T19:04:26")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2025-05-12T19:24:12")
 @StaticMetamodel(Lab.class)
 public class Lab_ { 
 
