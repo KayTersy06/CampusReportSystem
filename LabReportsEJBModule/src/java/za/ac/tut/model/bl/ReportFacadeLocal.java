@@ -24,7 +24,7 @@ public interface ReportFacadeLocal {
 
     Report find(Object id);
     List<Report> findReportsByCategory(String category);
-
+    List<Report> findReportsByStudentNum(Long studentNum);
     List<Report> findAll();
     
     List<Report> findRange(int[] range);
